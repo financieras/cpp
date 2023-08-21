@@ -13,3 +13,6 @@
 # Archivos de configuración específicos de IDEs
 .vscode/    #  excluir directorios específicos de Visual Studio Code
 .idea/      #  excluir directorios específicos de JetBrains IntelliJ IDEA
+
+# Archivo de configuración de Mac
+.DS_Store
