@@ -1,0 +1,15 @@
+# Archivos ejecutables generados por compiladores de C++
+*.out
+
+# Archivos objeto generados por compiladores de C++
+*.o
+
+# Archivos de dependencias generados por compiladores de C++
+*.d
+
+# Archivos de respaldo generados por editores de texto
+*~
+
+# Archivos de configuración específicos de IDEs
+.vscode/    #  excluir directorios específicos de Visual Studio Code
+.idea/      #  excluir directorios específicos de JetBrains IntelliJ IDEA
