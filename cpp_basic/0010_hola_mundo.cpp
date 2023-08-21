@@ -8,3 +8,5 @@ int main(){
 
     return 0;
 }
+
+// c++ hola_mundo.cpp && ./a.out
