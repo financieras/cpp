@@ -10,8 +10,9 @@ int main() {
     // Declarar un puntero y asignarle la dirección de memoria de la variable
     int* ptr = &num;
 
-    // Imprimir el valor de la variable utilizando el puntero
+    // Imprimir el valor de la variable y su dirección de memoria utilizando el puntero
     cout << "Valor de la variable: " << *ptr << endl;
+    cout << "Dirección de memoria de la variable: " << ptr << endl;
 
     // Modificar el valor de la variable a través del puntero
     *ptr = 20;
