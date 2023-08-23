@@ -4,7 +4,7 @@ using namespace std;
 
 int main() {
     // Declaración e inicialización de un array de enteros
-    int numeros[] = {10, 22, 30, 40, 50};
+    int numeros[] = {10, 20, 30, 40, 50};
 
     // Obtener la longitud del array
     int longitud = sizeof(numeros) / sizeof(numeros[0]);

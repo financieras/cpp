@@ -4,7 +4,7 @@ using namespace std;
 
 int main() {
     // Declaración e inicialización de un array de enteros
-    int numeros[5] = {1, 2, 3, 4, 5};
+    int numeros[] = {1, 2, 3, 4, 5};   // también es válido poner el número de elementos asi numeros[5]
 
     // Acceso y modificación de elementos del array
     cout << "Elemento en la posición 0: " << numeros[0] << endl;
