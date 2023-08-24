@@ -3,7 +3,7 @@
 using namespace std;
 
 // Función para intercambiar dos números enteros
-void intercambiar(int &a, int &b) {
+void permutar(int &a, int &b) {
     int temp = a;
     a = b;
     b = temp;
@@ -16,7 +16,7 @@ int main() {
     cout << "Antes del intercambio:   num1 = " << num1 << ", num2 = " << num2 << endl;
 
     // Llamamos a la función de intercambio utilizando referencias
-    intercambiar(num1, num2);
+    permutar(num1, num2);
 
     cout << "Después del intercambio: num1 = " << num1 << ", num2 = " << num2 << endl;
 

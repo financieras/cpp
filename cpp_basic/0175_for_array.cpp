@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-    int n = 5; // Número de elementos en el array
+    int n = 5;      // Número de elementos en el array
     int numeros[n]; // Declaración del array
     int i, a;
 
