@@ -1,62 +1,56 @@
 /*
-El polimorfismo permite que los objetos de diferentes clases se comporten de manera similar. 
-En este ejemplo, la clase hija Corredor hereda de la clase padre Atleta. 
-La clase hija tiene sus propios atributos (edad y genero) y su propio método Saludo(). 
-Sin embargo, también llama al método Saludo() de la clase padre usando Atleta::Saludo();. 
-Esto es un ejemplo de polimorfismo. 
-La clase hija Corredor se comporta como la clase padre Atleta, pero también tiene su propio comportamiento único. 
-El polimorfismo permite que los objetos de diferentes clases se comporten de manera similar, 
-lo que puede ser útil para simplificar el código y hacerlo más fácil de mantener.
+Polimorfismo significa "muchas formas" y 
+ocurre cuando tenemos muchas clases que están relacionadas entre sí por herencia.
+
+La herencia nos permite heredar atributos y métodos de otra clase. 
+El polimorfismo utiliza esos métodos para realizar diferentes tareas. 
+Esto nos permite realizar una misma acción de diferentes maneras.
+
+Por ejemplo, piense en una clase base llamada Animal que tiene un método llamado animalSound(). 
+Las clases derivadas de animales podrían ser cerdos, gatos, perros, pájaros, y 
+también tienen su propia implementación de un sonido animal 
+(el cerdo gruñe y el gato maúlla, etc.)
 */
+
 
 #include <iostream>
 using namespace std;
 
-// Clase padre
-class Atleta{
-    //Estos son los atributos
-    public:
-        string nombre;
-        float peso;
-    // Estos son los métodos y el constructor
-    public:
-        Atleta(string, float);
-        void Saludo();
+// Base class
+class Animal {
+  public:
+    void animalSound() {
+      cout << "The animal makes a sound \n";
+    }
 };
 
-Atleta::Atleta(string _nombre, float _peso){
-    nombre = _nombre;
-    peso = _peso;
-}
-
-void Atleta::Saludo(){
-    cout<<"Soy "<<nombre<<" atleta que pesa "<<peso<<" Kg.\n";
-}
-
-// Clase hija
-class Corredor : public Atleta{
-    public:
-        int edad;
-        char genero;
-    public:
-        Corredor(string, float, int, char);
-        void Saludo();
+// Derived class
+class Pig : public Animal {
+  public:
+    void animalSound() {
+      cout << "The pig says: wee wee \n";
+    }
 };
 
-Corredor::Corredor(string _nombre, float _peso, int _edad, char _genero) : Atleta(_nombre, _peso){
-    edad = _edad;
-    genero = _genero;
-}
+// Derived class
+class Dog : public Animal {
+  public:
+    void animalSound() {
+      cout << "The dog says: bow wow \n";
+    }
+};
 
-void Corredor::Saludo(){
-    Atleta::Saludo();
-    cout<<"Soy runer de género "<<genero<<" y tengo "<<edad<<" años."<<endl;
-}
 
 int main(){
 
-    Corredor pokemon1("María", 55, 24, 'F');
-    pokemon1.Saludo();
+    Animal myAnimal;
+    myAnimal.animalSound();
+
+    Pig myPig;
+    myPig.animalSound();
+
+    Dog myDog;
+    myDog.animalSound();
 
     return 0;
 }
